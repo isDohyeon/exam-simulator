@@ -28,13 +28,12 @@ public class ProblemLoader {
         StringBuilder sb = new StringBuilder();
         String line;
         while ((line = reader.readLine()) != null) {
-            if (line.isEmpty()) {
-                problems.add(sb.toString());
-                sb.setLength(0);
-                continue;
+            if (line.equals("끝")) {
+                break;
             }
             sb.append(line).append("\n");
+            problems.add(sb.toString());
+            sb.setLength(0);
         }
-        problems.add(sb.toString());
     }
 }

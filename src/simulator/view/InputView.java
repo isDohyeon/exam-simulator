@@ -16,7 +16,11 @@ public class InputView {
     }
 
     public void readAnswer() {
-        System.out.print("답 : ");
-        sc.nextLine();
+        while (true) {
+            String input = sc.nextLine();
+            if (input.isEmpty()) {
+                break;
+            }
+        }
     }
 }
